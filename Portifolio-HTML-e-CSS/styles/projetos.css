@@ -1,0 +1,161 @@
+/* ============================================
+   ESTILOS ESPECÍFICOS - PROJETOS.HTML
+   ============================================ */
+
+body:has(.projetos){
+    overflow: auto;
+    height: auto;
+    min-height: 100vh;
+}
+
+.projetos{
+    padding: 3% 8%;
+    flex: 1;
+}
+
+.projetos__titulo{
+    font-size: 2.25rem;
+    font-family: 'Krona One', sans-serif;
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--sky-blue);
+    animation: glow 3s ease-in-out infinite;
+}
+
+.projetos__grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projeto__card{
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 2px solid var(--sky-blue);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    height: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.projeto__card:hover{
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 40px var(--sky-blue-glow), 0 0 60px rgba(79, 195, 247, 0.2);
+    border-color: var(--sky-blue-light);
+    background: rgba(26, 26, 26, 0.95);
+}
+
+.projeto__imagem{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 2px solid var(--sky-blue);
+    transition: transform 0.4s ease;
+}
+
+.projeto__card:hover .projeto__imagem {
+    transform: scale(1.1);
+}
+
+.projeto__conteudo{
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 16px;
+}
+
+.projeto__titulo{
+    font-family: 'Krona One', sans-serif;
+    font-size: 1.5rem;
+    color: var(--sky-blue);
+    margin-bottom: 8px;
+    transition: text-shadow 0.3s ease;
+}
+
+.projeto__card:hover .projeto__titulo {
+    text-shadow: 0 0 15px var(--sky-blue-glow);
+}
+
+.projeto__descricao{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #F6F6F6;
+    line-height: 1.6;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.projeto__botao{
+    display: inline-block;
+    text-align: center;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, var(--sky-blue) 0%, var(--sky-blue-dark) 100%);
+    color: #000000;
+    text-decoration: none;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.4s ease;
+    border: 2px solid var(--sky-blue);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(79, 195, 247, 0.3);
+}
+
+.projeto__botao::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.projeto__botao:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.projeto__botao:hover{
+    background: transparent;
+    color: var(--sky-blue-light);
+    border-color: var(--sky-blue-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px var(--sky-blue-glow);
+}
+
+.projeto__botao > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   MEDIA QUERIES - PROJETOS
+   ============================================ */
+@media (max-width: 1200px) {
+    .projetos{
+        padding: 2% 4%;
+    }
+
+    .projetos__grid{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
