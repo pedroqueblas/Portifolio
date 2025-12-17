@@ -1,221 +1,252 @@
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap");
 
 /* ============================================
    RESET CSS
    ============================================ */
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 /* ============================================
    VARIÁVEIS GLOBAIS
    ============================================ */
 :root {
-    --sky-blue: #4FC3F7;
-    --sky-blue-light: #81D4FA;
-    --sky-blue-dark: #29B6F6;
-    --sky-blue-glow: rgba(79, 195, 247, 0.4);
-    --bg-dark: #0a0a0a;
-    --bg-card: #1a1a1a;
-    --bg-header: #151515;
+  --sky-blue: #4fc3f7;
+  --sky-blue-light: #81d4fa;
+  --sky-blue-dark: #29b6f6;
+  --sky-blue-glow: rgba(79, 195, 247, 0.4);
+  --bg-dark: #0a0a0a;
+  --bg-card: #1a1a1a;
+  --bg-header: #151515;
 }
 
 /* ============================================
    ANIMAÇÕES GLOBAIS
    ============================================ */
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes glow {
-    0%, 100% {
-        text-shadow: 0 0 10px var(--sky-blue-glow), 0 0 20px var(--sky-blue-glow);
-    }
-    50% {
-        text-shadow: 0 0 20px var(--sky-blue), 0 0 30px var(--sky-blue), 0 0 40px var(--sky-blue);
-    }
+  0%,
+  100% {
+    text-shadow: 0 0 10px var(--sky-blue-glow), 0 0 20px var(--sky-blue-glow);
+  }
+  50% {
+    text-shadow: 0 0 20px var(--sky-blue), 0 0 30px var(--sky-blue),
+      0 0 40px var(--sky-blue);
+  }
 }
 
 /* ============================================
    ESTILOS GLOBAIS
    ============================================ */
-html, body{
-    margin: 0;
-    padding: 0;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
-html{
-    height: 100%;
+html {
+  min-height: 100%;
 }
 
-body{
-    box-sizing: border-box;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-    color: #F6F6F6;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
+body {
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
 }
 
 body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 20% 50%, rgba(79, 195, 247, 0.05) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(79, 195, 247, 0.05) 0%, transparent 50%);
-    pointer-events: none;
-    z-index: 0;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+      circle at 20% 50%,
+      rgba(79, 195, 247, 0.05) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(79, 195, 247, 0.05) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+  z-index: 0;
 }
 
 /* ============================================
    HEADER (Global)
    ============================================ */
-.cabecalho{
-    padding: 25px 8%;
-    background: rgba(21, 21, 21, 0.4);
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border-bottom: 1px solid rgba(79, 195, 247, 0.3);
-    border-top: 1px solid rgba(79, 195, 247, 0.1);
-    flex-shrink: 0;
-    position: relative;
-    z-index: 100;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5),
-                0 1px 0 rgba(255, 255, 255, 0.1) inset,
-                0 -1px 0 rgba(79, 195, 247, 0.2) inset;
+.cabecalho {
+  padding: 25px 8%;
+  background: rgba(21, 21, 21, 0.4);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(79, 195, 247, 0.3);
+  border-top: 1px solid rgba(79, 195, 247, 0.1);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 100;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5),
+    0 1px 0 rgba(255, 255, 255, 0.1) inset,
+    0 -1px 0 rgba(79, 195, 247, 0.2) inset;
 }
 
 .cabecalho::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(79, 195, 247, 0.05) 0%, transparent 50%);
-    pointer-events: none;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(79, 195, 247, 0.05) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
+  z-index: -1;
 }
 
-.cabecalho__menu{
-    display: flex;
-    gap: 40px;
-    justify-content: center;
+.cabecalho__menu {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
 }
 
-.cabecalho__menu__link{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--sky-blue);
-    text-decoration: none;
-    position: relative;
-    transition: all 0.3s ease;
-    padding: 8px 16px;
-    border-radius: 8px;
-    background: rgba(79, 195, 247, 0.05);
-    backdrop-filter: blur(10px);
+.cabecalho__menu__link {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--sky-blue);
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: rgba(79, 195, 247, 0.05);
+  backdrop-filter: blur(10px);
 }
 
 .cabecalho__menu__link::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--sky-blue);
-    transition: width 0.3s ease;
-    box-shadow: 0 0 10px var(--sky-blue);
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--sky-blue);
+  transition: width 0.3s ease;
+  box-shadow: 0 0 10px var(--sky-blue);
 }
 
 .cabecalho__menu__link:hover {
-    color: var(--sky-blue-light);
-    text-shadow: 0 0 10px var(--sky-blue-glow);
-    background: rgba(79, 195, 247, 0.15);
-    box-shadow: 0 0 15px rgba(79, 195, 247, 0.3),
-                0 2px 8px rgba(0, 0, 0, 0.2) inset;
+  color: var(--sky-blue-light);
+  text-shadow: 0 0 10px var(--sky-blue-glow);
+  background: rgba(79, 195, 247, 0.15);
+  box-shadow: 0 0 15px rgba(79, 195, 247, 0.3),
+    0 2px 8px rgba(0, 0, 0, 0.2) inset;
 }
 
 .cabecalho__menu__link:hover::before {
-    width: 100%;
+  width: 100%;
 }
 
 /* ============================================
    FOOTER (Global)
    ============================================ */
-.rodape{
-    color: var(--sky-blue);
-    background: rgba(21, 21, 21, 0.4);
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-    padding: 25px;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 400;
-    flex-shrink: 0;
-    border-top: 1px solid rgba(79, 195, 247, 0.3);
-    border-bottom: 1px solid rgba(79, 195, 247, 0.1);
-    position: relative;
-    z-index: 100;
-    box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.5),
-                0 -1px 0 rgba(255, 255, 255, 0.1) inset,
-                0 1px 0 rgba(79, 195, 247, 0.2) inset;
+.rodape {
+  color: var(--sky-blue);
+  background: rgba(21, 21, 21, 0.4);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  padding: 25px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  flex-shrink: 0;
+  border-top: 1px solid rgba(79, 195, 247, 0.3);
+  border-bottom: 1px solid rgba(79, 195, 247, 0.1);
+  position: relative;
+  z-index: 100;
+  box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.5),
+    0 -1px 0 rgba(255, 255, 255, 0.1) inset,
+    0 1px 0 rgba(79, 195, 247, 0.2) inset;
 }
 
 .rodape::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, transparent 0%, rgba(79, 195, 247, 0.05) 100%);
-    pointer-events: none;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    transparent 0%,
+    rgba(79, 195, 247, 0.05) 100%
+  );
+  pointer-events: none;
+  z-index: -1;
 }
 
 /* ============================================
    MEDIA QUERIES GLOBAIS
    ============================================ */
 @media (max-width: 1200px) {
-    .cabecalho{
-        padding: 20px 4%;
-    }
+  .cabecalho {
+    padding: 20px 4%;
+  }
 
-    .rodape{
-        padding: 20px;
-    }
+  .rodape {
+    padding: 20px;
+  }
 
-    .cabecalho__menu{
-        justify-content: center;
-        gap: 25px;
-    }
+  .cabecalho__menu {
+    justify-content: center;
+    gap: 25px;
+  }
 
-    .cabecalho__menu__link{
-        font-size: 0.9rem;
-    }
+  .cabecalho__menu__link {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cabecalho__menu {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .cabecalho__menu__link {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
 }
