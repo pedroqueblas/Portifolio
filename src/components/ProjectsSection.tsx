@@ -6,9 +6,9 @@ const projects = [
   {
     title: "Projeto Exemplo 1",
     description: "Uma breve descrição do projeto desenvolvido utilizando tecnologias modernas de front-end. Este projeto demonstra habilidades em desenvolvimento web.",
-    image: "/assets/avatar3.jpg", // Placeholder
-    repoUrl: "#",
-    liveUrl: "#",
+    image: "/assets/projeto1.png", // Placeholder
+    repoUrl: "https://github.com/pedroqueblas/dashboard-financeiro",
+    liveUrl: "https://dashboard-financeiro-silk.vercel.app/login",
   },
   {
     title: "Projeto Exemplo 2",
