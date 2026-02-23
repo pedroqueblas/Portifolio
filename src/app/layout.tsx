@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: "Pedro Queblas | Portfolio",
   description: "Desenvolvedor Front-end especializado em React, Next.js e UX/UI.",
   icons: {
-    icon: "/assets/logopedro.ico",
+    icon: "/assets/htmlicon.jfif",
   },
 };
 

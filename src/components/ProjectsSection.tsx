@@ -20,21 +20,42 @@ const projects = [
       "Aplicação web desenvolvida com Django para agendamento de doações de sangue no HEMOPE. O sistema permite o cadastro de doadores, escolha de datas e horários disponíveis e acompanhamento do histórico de doações.",
     image: "/assets/agendamento.png", 
     repoUrl: "#",
-    liveUrl: "#",
+    liveUrl: "https://agendamentohemope.pe.gov.br/",
   },
   {
     title: "Henrique Cavalcanti - OFC",
     description: "Em construção.",
     image: "/assets/henriqueofc.png", 
     repoUrl: "https://github.com/pedroqueblas/henriquedublador.git",
-    liveUrl: "https://henriquedublador.vercel.app/",
+    liveUrl: "https://henriquecavalcantiofc.vercel.app/",
+  },
+   {
+    title: "Naty - Gourmet",
+    description: "O Cardápio Digital NatyGourmet foi desenvolvido para valorizar a experiência do cliente e destacar a sofisticação dos nossos picolés gourmet. A solução facilita atualizações, promove praticidade no atendimento e reforça a presença digital da NatyGourmet, unindo tecnologia e sabor em um só lugar.",
+    image: "/assets/natycard.png", 
+    repoUrl: "https://github.com/pedroqueblas/naty-gourmet.git",
+    liveUrl: "https://natygourmet.vercel.app/",
+  },
+   {
+    title: "Rafael Carvalho (Nutri)",
+    description: "O Cardápio Digital NatyGourmet foi desenvolvido para valorizar a experiência do cliente e destacar a sofisticação dos nossos picolés gourmet. A solução facilita atualizações, promove praticidade no atendimento e reforça a presença digital da NatyGourmet, unindo tecnologia e sabor em um só lugar.",
+    image: "/assets/natycard.png", 
+    repoUrl: "https://github.com/pedroqueblas/naty-gourmet.git",
+    liveUrl: "https://rafael-carvalho-personal.vercel.app/",
+  },
+   {
+    title: "Clara Santos",
+    description: "O Cardápio Digital NatyGourmet foi desenvolvido para valorizar a experiência do cliente e destacar a sofisticação dos nossos picolés gourmet. A solução facilita atualizações, promove praticidade no atendimento e reforça a presença digital da NatyGourmet, unindo tecnologia e sabor em um só lugar.",
+    image: "/assets/natycard.png", 
+    repoUrl: "https://github.com/pedroqueblas/naty-gourmet.git",
+    liveUrl: "https://natygourmet.vercel.app/",
   },
   {
-    title: "Sheep - Company",
-    description: "Em construção.",
-    image: "/assets/avatar3.jpg", 
-    repoUrl: "#",
-    liveUrl: "#",
+    title: "Tamo Junto",
+    description: "A página do Projeto Social Tamo Junto, O objetivo é apresentar de forma transparente a missão do projeto, suas ações e os benefícios gerados para a comunidade. Essa solução digital fortalece a presença online do Projeto Tamo Junto, amplia seu alcance e contribui para a mobilização social, conectando pessoas, ideias e oportunidades por meio da tecnologia.",
+    image: "/assets/tamojunto.png", 
+    repoUrl: "https://github.com/Tiago1022/tamojunto",
+    liveUrl: "https://tamojuntooficial.com.br/",
   },
 ];
 
@@ -68,7 +89,7 @@ export default function ProjectsSection() {
           </div>
         </motion.div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <ProjectCard
               key={index}
