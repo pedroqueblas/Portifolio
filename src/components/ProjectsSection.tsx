@@ -57,6 +57,13 @@ const projects = [
     repoUrl: "https://github.com/Tiago1022/tamojunto",
     liveUrl: "https://tamojuntooficial.com.br/",
   },
+   {
+    title: "Queblas-GymApp",
+    description: "https://queblasgymapp.vercel.app/",
+    image: "/assets/gym.png", 
+    repoUrl: "https://github.com/pedroqueblas/GymTracker",
+    liveUrl: "https://queblasgymapp.vercel.app/",
+  },
 ];
 
 export default function ProjectsSection() {
